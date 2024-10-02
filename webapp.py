@@ -10,7 +10,6 @@ def render_main():
 def render_home(): 
     user = request.args['uname']
     reply1 = "Welcome, " + user + "!"
-
     return render_template('home.html', response1 = reply1)
     
     
