@@ -14,7 +14,7 @@ def render_home():
 
 @app.route("/redirect")
 def redirect_to_realterms():
-    user = request.args.get('uname')  # Get the username from the query parameters
+    user = request.args.get('uname')  
     return render_template('realterms.html', uname=user)
     
 @app.route("/verif")
