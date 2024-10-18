@@ -14,7 +14,7 @@ def render_home():
 
 @app.route("/redirect")
 def redirect_to_realterms():
-    user = request.args.get('uname')  
+    user = request.args.get('uname')  # ai gen 
     return render_template('realterms.html', uname=user)
     
 @app.route("/verif")
