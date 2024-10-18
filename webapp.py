@@ -11,7 +11,11 @@ def render_home():
     user = request.args['uname']
     reply1 = "Welcome, " + user + "!"
     return render_template('home.html', response1 = reply1)
-    
+
+@app.route("/redirect")
+def redirect_to_realterms():
+    user = request.args.get('uname')  # Get the username from the query parameters
+    return render_template('realterms.html', uname=user)
     
 @app.route("/verif")
 def render_verif(): 
@@ -19,3 +23,4 @@ def render_verif():
     
 if __name__=="__main__":
     app.run(debug=True)
+
