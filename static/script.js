@@ -1,10 +1,9 @@
-
 $(document).ready(function() {
   $("p").click(function() {
     $(this).hide();
   });
 
-  function storeSelectedValue() {
+  window.storeSelectedValue = function() {
     const radios = document.getElementsByName('optradio');
     for (const radio of radios) {
       if (radio.checked) {
@@ -12,6 +11,6 @@ $(document).ready(function() {
         break;
       }
     }
-    return true;
-  }
+    return true; 
+  };
 });
