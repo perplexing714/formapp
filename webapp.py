@@ -22,8 +22,9 @@ def render_home():
 
 @app.route("/redirect")
 def redirect_to_realterms():
-    user = request.args.get('uname')  # ai gen 
-    return render_template('realterms.html', uname=user)
+    user = request.args.get('uname')
+    trophy_count = request.args.get('trophy_count')  
+    return redirect(url_for('render_home', uname=user, trophy_count=trophy_count))
     
 @app.route("/verif")
 def render_verif(): 
